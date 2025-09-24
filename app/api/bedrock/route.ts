@@ -21,6 +21,9 @@ export async function POST(request: NextRequest) {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
+    // In your API route or server code
+    console.log("Google API Key:", process.env.GOOGLE_API_KEY);
+
     // Combine instruction + user input
     const prompt = `${instruction}\n\nConstraint: Utilise the use of HTML tables and lists if the output info is suitable for them. The HTML tables and lists have to be visible and has a table border for the table format.  \n\n User: ${message}`;
     
