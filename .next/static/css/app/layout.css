@@ -516,8 +516,20 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-130 {
+    width: calc(var(--spacing) * 130);
+  }
+  .w-145 {
+    width: calc(var(--spacing) * 145);
+  }
+  .w-150 {
+    width: calc(var(--spacing) * 150);
+  }
   .w-167 {
     width: calc(var(--spacing) * 167);
+  }
+  .w-170 {
+    width: calc(var(--spacing) * 170);
   }
   .w-full {
     width: 100%;

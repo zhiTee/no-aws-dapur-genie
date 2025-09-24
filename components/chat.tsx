@@ -262,7 +262,7 @@ export default function Chat() {
   }, [loading])
 
   return (
-    <div className="w-167 h-[600px]">
+    <div className="h-[600px]">
       <Card className="w-full h-full flex flex-col shadow-md rounded-2xl">
       {/* Language Selector */}
       <div className="flex justify-end p-3 border-b relative shrink-0">
