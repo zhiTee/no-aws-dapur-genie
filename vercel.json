@@ -1,0 +1,15 @@
+{
+  "functions": {
+    "app/api/*/route.ts": {
+      "maxDuration": 30
+    }
+  },
+  "env": {
+    "GOOGLE_API_KEY": "@google-api-key",
+    "ASSEMBLYAI_API_KEY": "@assemblyai-api-key",
+    "HUGGINGFACE_API_KEY": "@huggingface-api-key",
+    "AWS_ACCESS_KEY_ID": "@aws-access-key-id",
+    "AWS_SECRET_ACCESS_KEY": "@aws-secret-access-key",
+    "AWS_REGION": "@aws-region"
+  }
+}
