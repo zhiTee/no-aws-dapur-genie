@@ -5,8 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
-import { Send, Loader2, Mic, Camera, Square, ChevronDown } from "lucide-react"
+import { Send, Loader2, Mic, Camera, Square, ChevronDown, ImageIcon } from "lucide-react"
 import TypewriterEffect from "@/components/TypewriterEffect"
+import CameraCapture from "@/components/CameraCapture"
 
 type Message = {
   id: number
@@ -34,12 +35,15 @@ export default function Chat() {
   const mediaRecorderRef = React.useRef<MediaRecorder | null>(null)
   const audioChunksRef = React.useRef<Blob[]>([])
   const [userScrolled, setUserScrolled] = React.useState(false)
+  const [showCamera, setShowCamera] = React.useState(false)
 
   const scrollRef = React.useRef<HTMLDivElement>(null)
   const fileInputRef = React.useRef<HTMLInputElement>(null)
   const chatContainerRef = React.useRef<HTMLDivElement>(null)
   
   const handlePickMedia = () => fileInputRef.current?.click()
+  const handleOpenCamera = () => setShowCamera(true)
+  const handleCloseCamera = () => setShowCamera(false)
   
   const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0]
@@ -342,12 +346,23 @@ export default function Chat() {
         <Button
           type="button"
           size="icon"
-          aria-label="Attach photo or video"
-          onClick={handlePickMedia}
+          aria-label="Take photo with camera"
+          onClick={handleOpenCamera}
           disabled={loading}
           className="bg-muted text-muted-foreground hover:bg-muted/80"
         >
           <Camera className="h-5 w-5" />
+        </Button>
+        
+        <Button
+          type="button"
+          size="icon"
+          aria-label="Upload image from gallery"
+          onClick={handlePickMedia}
+          disabled={loading}
+          className="bg-muted text-muted-foreground hover:bg-muted/80"
+        >
+          <ImageIcon className="h-5 w-5" />
         </Button>
         
         <input
@@ -410,6 +425,13 @@ export default function Chat() {
         </Button>
       </div>
     </Card>
+    
+    {showCamera && (
+      <CameraCapture
+        onCapture={handleImageUpload}
+        onClose={handleCloseCamera}
+      />
+    )}
     </div>
   )
 }
