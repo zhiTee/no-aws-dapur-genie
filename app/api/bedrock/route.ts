@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
 
     // Initialize Gemini client
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
 
     // In your API route or server code
     console.log("Google API Key:", process.env.GEMINI_API_KEY);

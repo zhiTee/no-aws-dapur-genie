@@ -1,3 +1,4 @@
 {
+  "/api/bedrock/route": "app/api/bedrock/route.js",
   "/page": "app/page.js"
 }
