@@ -15,6 +15,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/api/bedrock/route.js"
+    ],
+    "/api/transcribe/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/transcribe/route.js"
     ]
   }
 }
