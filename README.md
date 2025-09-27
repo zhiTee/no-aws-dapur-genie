@@ -1,6 +1,6 @@
 # 🍽️ DapurGenie 
 
-**Deployment Link:** [https://vercel.com/ztee0007s-projects/no-aws-dapur-genie-eruw/sfx1rAaxTeJYWFMrcbEhsaRnP6DQ]
+**Deployment Link:** [https://no-aws-dapur-genie-eruw-git-main-ztee0007s-projects.vercel.app/](https://no-aws-dapur-genie-eruw-git-main-ztee0007s-projects.vercel.app/)
 
 **"When the shutters close, the kitchen still answers."**
 
@@ -58,5 +58,6 @@ Try the [**Bangi Outlet Demo**](#) — ask in BM, EN, or CN:
 ```bash
 git clone https://github.com/yourusername/dapurgenie.git
 cd dapurgenie
+
 
 
